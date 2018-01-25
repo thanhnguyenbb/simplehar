@@ -120,8 +120,8 @@ var harParser = module.exports = function(har, htmlEncode) {
 		hars = hars.map(function(page) {
 			var entries = filterEntryByPage(har.entries, page.id),
 				pageTimings = page.pageTimings,
-				onContentLoad = pageTimings.onContentLoad || false,
-				onLoad = pageTimings.onLoad,
+				onContentLoad = 0 || false,
+				onLoad = 0,
 				totalSize = 0,
 				totalCompressedSize = 0,
 				lastTimeArray = [onLoad],
